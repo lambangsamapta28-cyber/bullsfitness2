@@ -1,0 +1,95 @@
+<?php
+session_start(); // Wajib ada di paling atas untuk baca session login
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member - Bull's Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo"></div>
+            <ul>
+                <li><a href="index.php">Beranda</a></li>
+                <li><a href="member.php" class="active">Member</a></li>
+                <li><a href="tentang.php">Tentang</a></li>
+                <li><a href="tip.php">Tips & Blog</a></li>
+                
+                <?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true): ?>
+                    <li>
+                        <a href="profile.php" class="user-menu">
+                            <?= htmlspecialchars(explode(" ", $_SESSION['full_name'])[0]); ?>
+                        </a>
+                    </li>
+                <?php else: ?>
+                    <li><a href="login.php" style="font-weight: bold; color: #DAA520;">Login</a></li>
+                <?php endif; ?>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="member-page">
+        <h2>Pilih Paket Membership Anda</h2>
+        <p class="sub-judul">Dapatkan akses ke semua fasilitas premium kami.</p>
+
+        <div class="member-container">
+            
+            <div class="member-card">
+                <div class="card-image-placeholder">
+                    <img src="img/card6.png" alt="Member Card 6 Bulan" class="card-image-real">
+                </div>
+                <div class="card-content">
+                    <h3>Paket 6 Bulan</h3>
+                    <p>Akses gym penuh tak terbatas selama 6 bulan. Pilihan populer untuk komitmen jangka menengah.</p>
+                    
+                    <h4 style="color: #DAA520; margin: 10px 0;">Rp 1.500.000</h4>
+
+                    <form action="pembayaran.php" method="POST">
+                        <input type="hidden" name="package_name" value="Paket 6 Bulan">
+                        <input type="hidden" name="duration" value="6">
+                        <input type="hidden" name="price" value="1500000">
+                        
+                        <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer;">
+                            Beli Sekarang
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <div class="card-image-placeholder">
+                    <img src="img/card12.png" alt="Member Card 12 Bulan" class="card-image-real">
+                </div>
+                <div class="card-content">
+                    <h3>Paket 12 Bulan</h3>
+                    <p>Nilai terbaik! Dapatkan 12 bulan penuh dengan harga lebih hemat. Pilihan terbaik untuk hasil maksimal.</p>
+                    
+                    <h4 style="color: #DAA520; margin: 10px 0;">Rp 2.300.000</h4>
+
+                    <form action="pembayaran.php" method="POST">
+                        <input type="hidden" name="package_name" value="Paket 12 Bulan">
+                        <input type="hidden" name="duration" value="12">
+                        <input type="hidden" name="price" value="2300000">
+                        
+                        <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer;">
+                            Beli Sekarang
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bull's Fitness. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
