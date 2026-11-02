@@ -1,7 +1,3 @@
-﻿<?php
-session_start(); // Wajib ada di paling atas untuk baca session login
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -15,47 +11,32 @@ session_start(); // Wajib ada di paling atas untuk baca session login
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="BullsFitness">
     <link rel="apple-touch-icon" href="img/icon-192.png">
-        <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="mobile.css?v=2.0">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo"></div>
             <ul>
-                <li><a href="index.php" class="active">Beranda</a></li>
-                <li><a href="member.php">Member</a></li>
-                <li><a href="tentang.php">Tentang</a></li>
-                <li><a href="tip.php">Tips & Blog</a></li>
-                
-                <?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true): ?>
-                    <li>
-                        <a href="profile.php" class="user-menu">
-                            <?= htmlspecialchars(explode(" ", $_SESSION['full_name'])[0]); ?>
-                        </a>
-                    </li>
-                <?php else: ?>
-                    <li><a href="login.php" style="font-weight: bold; color: #DAA520;">Login</a></li>
-                <?php endif; ?>
-                </ul>
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="member.html">Member</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="tip.html">Tips & Blog</a></li>
+                <li><a href="login.html" style="font-weight: bold; color: #DAA520;">Login</a></li>
+            </ul>
         </nav>
     </header>
     
-     <video class="back-video" autoplay muted loop>
-                <source src="vid/Gym Promotional Video _ Cinematic Workout Advertisment.mp4" type="video/mp4">
-     </video>
+    <video class="back-video" autoplay muted loop playsinline>
+        <source src="vid/Gym Promotional Video _ Cinematic Workout Advertisment.mp4" type="video/mp4">
+    </video>
 
     <main>
         <section class="hero">
-            <?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true): ?>
-                <h1>Selamat Datang Kembali, <?= explode(" ", $_SESSION['full_name'])[0]; ?>!</h1>
-                <p>Siap untuk latihan hari ini? Cek status membership Anda.</p>
-                <a href="profile.php" class="cta-button">Cek Profil Saya</a>
-            <?php else: ?>
-                <h1>Start Your Fitness Experience With Bull's Fitness</h1>
-                <p>Bergabunglah sekarang dan mulai perjalanan kebugaran Anda!</p>
-                <a href="member.html" class="cta-button">Lihat Paket Member</a>
-            <?php endif; ?>
+            <h1>Start Your Fitness Experience With Bull's Fitness</h1>
+            <p>Bergabunglah sekarang dan mulai perjalanan kebugaran Anda!</p>
+            <a href="member.html" class="cta-button">Lihat Paket Member</a>
         </section>
 
         <section class="section-below-video">
@@ -107,8 +88,8 @@ session_start(); // Wajib ada di paling atas untuk baca session login
     </main>
 
     <footer>
-        <p>Â© 2025 Bull's Fitness. Hak Cipta Dilindungi.</p>
+        <p>© 2025 Bull's Fitness. Hak Cipta Dilindungi.</p>
     </footer>
-    <script src="pwa.js"></script>
+    <script src="pwa.js?v=2.0"></script>
 </body>
 </html>

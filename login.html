@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bull's Fitness</title>
+        <!-- PWA Settings -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#DAA520">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="img/icon-192.png">
+        <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="mobile.css?v=2.0">
+</head>
+<body class="auth-body"> <header>
+        <nav>
+            <div class="logo"></div>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="member.html">Member</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="tip.html">Tips & Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+        <div class="auth-overlay">
+            <h2>Masuk Member</h2>
+            
+            
+                <div style="background: #ffcccc; color: red; padding: 10px; margin-bottom:10px; border-radius:5px;">
+                    <?= $error_msg; ?>
+                </div>
+            
+
+            <form method="POST" action="">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" required>
+                </div>
+                <button type="submit" name="tombol_login" class="auth-btn">LOGIN</button>
+            </form>
+
+            <a href="register.html" class="auth-link">Belum punya akun? Daftar</a>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2025 Bull's Fitness. Hak Cipta Dilindungi.</p></footer>
+    <script src="pwa.js?v=2.0"></script>
+</body>
+</html>
