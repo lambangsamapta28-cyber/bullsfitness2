@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start(); // Wajib ada di paling atas untuk baca session login
 ?>
 

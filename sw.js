@@ -1,10 +1,7 @@
-const CACHE_NAME = 'bulls-fitness-v2';
+const CACHE_NAME = 'bulls-fitness-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.php',
-  './member.php',
-  './tentang.php',
-  './tip.php',
   './style.css',
   './mobile.css',
   './manifest.json',
@@ -22,7 +19,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate Event (Hapus cache versi lama)
+// Activate Event: bersihkan cache lama
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -37,10 +34,24 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch Event (Network First)
+// Fetch Event
 self.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') return;
+  const url = new URL(event.request.url);
 
+  // PENTING: JANGAN PERNAH CACHE halaman otentikasi, login, otp, form submit, atau request non-GET
+  if (
+    event.request.method !== 'GET' ||
+    url.pathname.endsWith('login.php') ||
+    url.pathname.endsWith('verify.php') ||
+    url.pathname.endsWith('logout.php') ||
+    url.pathname.endsWith('register.php') ||
+    url.pathname.endsWith('process_payment.php') ||
+    url.pathname.endsWith('admin.php')
+  ) {
+    return; // Biarkan langsung ke server / PHP backend tanpa diintersepsi Service Worker
+  }
+
+  // Network First untuk file statis / GET
   event.respondWith(
     fetch(event.request)
       .then((response) => {
@@ -52,13 +63,6 @@ self.addEventListener('fetch', (event) => {
         }
         return response;
       })
-      .catch(() => {
-        return caches.match(event.request).then((cachedResponse) => {
-          if (cachedResponse) return cachedResponse;
-          if (event.request.headers.get('accept').includes('text/html')) {
-            return caches.match('./index.php');
-          }
-        });
-      })
+      .catch(() => caches.match(event.request))
   );
 });
