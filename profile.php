@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 require 'db.php';
 
@@ -72,7 +72,14 @@ $inisial = strtoupper(substr($data['full_name'], 0, 1));
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Member - Bull's Fitness</title>
-    <link rel="stylesheet" href="style.css">
+        <!-- PWA Settings -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#DAA520">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="img/icon-192.png">
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
     
@@ -104,7 +111,7 @@ $inisial = strtoupper(substr($data['full_name'], 0, 1));
                     <?php if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin'): ?>
                         <div style="margin-top: 30px;">
                             <a href="admin.php" class="cta-button" style="display: block; width: 100%; text-align: center; text-decoration: none; border: 1px solid #DAA520;">
-                                👑 Dashboard Admin
+                                ðŸ‘‘ Dashboard Admin
                             </a>
                         </div>
                     <?php endif; ?>
@@ -138,7 +145,7 @@ $inisial = strtoupper(substr($data['full_name'], 0, 1));
                           <td><?= $data['end_date'] ? date("m/y", strtotime($data['end_date'])) : '--/--'; ?></td> </tr>
                         <tr>
                          <td>Status Member</td>
-                          <td><span class="status-active">● AKTIF</span></td>
+                          <td><span class="status-active">â— AKTIF</span></td>
                         </tr>
                         <tr>
                          <td>Sisa Waktu</td>
@@ -171,5 +178,7 @@ $inisial = strtoupper(substr($data['full_name'], 0, 1));
         <p>&copy; 2025 Bull's Fitness. Hak Cipta Dilindungi.</p>
     </footer>
 
+    <script src="pwa.js"></script>
 </body>
 </html>
+

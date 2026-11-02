@@ -1,0 +1,40 @@
+{
+  "name": "Bull's Fitness",
+  "short_name": "BullsFitness",
+  "description": "Bull's Fitness Membership & Gym Management",
+  "start_url": "index.php",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#DAA520",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Paket Member",
+      "short_name": "Member",
+      "description": "Lihat paket membership",
+      "url": "member.php",
+      "icons": [{ "src": "img/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Tips & Blog",
+      "short_name": "Tips",
+      "description": "Tips latihan dan kebugaran",
+      "url": "tip.php",
+      "icons": [{ "src": "img/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

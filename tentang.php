@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start(); // Wajib ada di paling atas untuk baca session login
 ?>
 
@@ -7,7 +7,14 @@ session_start(); // Wajib ada di paling atas untuk baca session login
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami - Bull's Fitness</title> <link rel="stylesheet" href="style.css">
+    <title>Tentang Kami - Bull's Fitness</title>     <!-- PWA Settings -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#DAA520">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="img/icon-192.png">
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
     
@@ -64,19 +71,19 @@ session_start(); // Wajib ada di paling atas untuk baca session login
         <div class="filosofi-container">
             
             <div class="filosofi-item">
-                <span class="filosofi-icon">🏆</span> 
+                <span class="filosofi-icon">ðŸ†</span> 
                 <h3>Fasilitas Elit</h3>
                 <p>Kekuatan menuntut peralatan terbaik. Kami berinvestasi pada mesin (plate-loaded) premium, (free weights) terlengkap, dan zona fungsional yang dirancang untuk performa optimal.</p>
             </div>
 
             <div class="filosofi-item">
-                <span class="filosofi-icon">🧠</span>
+                <span class="filosofi-icon">ðŸ§ </span>
                 <h3>Bimbingan Pakar</h3>
                 <p>Berlatih keras saja tidak cukup; Anda harus berlatih cerdas. Tim pelatih elit kami adalah para spesialis bersertifikat yang berdedikasi pada kemajuan Anda yang aman dan efisien.</p>
             </div>
 
             <div class="filosofi-item">
-                <span class="filosofi-icon">🤝</span>
+                <span class="filosofi-icon">ðŸ¤</span>
                 <h3>Komunitas Juara</h3>
                 <p>Anda adalah cerminan dari lingkungan Anda. Di Bull's Fitness, Anda dikelilingi oleh individu-individu yang fokus, termotivasi, dan saling mendukung untuk tumbuh lebih kuat.</p>
             </div>
@@ -95,5 +102,7 @@ session_start(); // Wajib ada di paling atas untuk baca session login
         <p>&copy; 2025 Bull's Fitness. Hak Cipta Dilindungi.</p>
     </footer>
 
+    <script src="pwa.js"></script>
 </body>
 </html>
+

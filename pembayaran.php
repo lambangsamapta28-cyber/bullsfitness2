@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 require 'db.php';
 
@@ -29,7 +29,14 @@ $harga_format = "Rp " . number_format($harga, 0, ',', '.');
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Checkout - <?= $paket; ?></title>
-  <link rel="stylesheet" href="style.css">
+      <!-- PWA Settings -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#DAA520">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="img/icon-192.png">
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
   
   <style>
       /* Layout Tengah */
@@ -151,7 +158,7 @@ $harga_format = "Rp " . number_format($harga, 0, ',', '.');
           <input type="hidden" name="price" value="<?= $harga; ?>">
           
           <button type="submit" name="konfirmasi_bayar" class="btn-confirm">
-              ✅ SAYA SUDAH MEMBAYAR
+              âœ… SAYA SUDAH MEMBAYAR
           </button>
       </form>
       
@@ -180,5 +187,7 @@ $harga_format = "Rp " . number_format($harga, 0, ',', '.');
         });
     };
   </script>
+    <script src="pwa.js"></script>
 </body>
 </html>
+

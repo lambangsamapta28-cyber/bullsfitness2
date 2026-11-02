@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // --- SETUP ERROR REPORTING ---
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -105,7 +105,14 @@ if (isset($_POST['tombol_login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Bull's Fitness</title>
-    <link rel="stylesheet" href="style.css">
+        <!-- PWA Settings -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#DAA520">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="img/icon-192.png">
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body class="auth-body"> <header>
         <nav>
@@ -146,5 +153,7 @@ if (isset($_POST['tombol_login'])) {
     </main>
 
     <footer><p>&copy; 2025 Bull's Fitness. Hak Cipta Dilindungi.</p></footer>
+    <script src="pwa.js"></script>
 </body>
 </html>
+

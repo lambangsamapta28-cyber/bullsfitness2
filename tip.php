@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start(); // Wajib ada di paling atas untuk baca session login
 ?>
 
@@ -7,7 +7,14 @@ session_start(); // Wajib ada di paling atas untuk baca session login
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tips & Blog - Bull's Fitness</title> <link rel="stylesheet" href="style.css">
+    <title>Tips & Blog - Bull's Fitness</title>     <!-- PWA Settings -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#DAA520">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="img/icon-192.png">
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
     
@@ -53,7 +60,7 @@ session_start(); // Wajib ada di paling atas untuk baca session login
                     
                     <h3>1. Konsisten Olahraga</h3>
                     <ul>
-                        <li>Lakukan olahraga minimal 30 menit per hari, 3–5 kali seminggu.</li>
+                        <li>Lakukan olahraga minimal 30 menit per hari, 3â€“5 kali seminggu.</li>
                         <li>Pilih aktivitas yang kamu sukai: jogging, bersepeda, berenang, senam, atau sekadar jalan cepat.</li>
                         <li>Kombinasikan:
                             <ul>
@@ -66,13 +73,13 @@ session_start(); // Wajib ada di paling atas untuk baca session login
 
                     <h3>2. Pemanasan & Pendinginan</h3>
                     <ul>
-                        <li>Selalu lakukan pemanasan 5–10 menit before olahraga untuk mencegah cedera.</li>
+                        <li>Selalu lakukan pemanasan 5â€“10 menit before olahraga untuk mencegah cedera.</li>
                         <li>Akhiri dengan pendinginan agar detak jantung dan otot kembali rileks.</li>
                     </ul>
 
                     <h3>3. Tidur Cukup</h3>
                     <ul>
-                        <li>Tidur 7–9 jam per malam penting untuk pemulihan otot dan daya tahan tubuh.</li>
+                        <li>Tidur 7â€“9 jam per malam penting untuk pemulihan otot dan daya tahan tubuh.</li>
                         <li>Kurang tidur bisa menurunkan performa olahraga dan metabolisme.</li>
                     </ul>
 
@@ -89,16 +96,16 @@ session_start(); // Wajib ada di paling atas untuk baca session login
                     <p>Keseimbangan nutrisi adalah kunci utama kebugaran.</p>
 
                     <h3>1. Makan Seimbang</h3>
-                    <p>Gunakan prinsip “Isi Piringku” dari Kemenkes:</p>
+                    <p>Gunakan prinsip â€œIsi Piringkuâ€ dari Kemenkes:</p>
                     <ul>
-                        <li><strong>½ piring:</strong> sayur dan buah</li>
-                        <li><strong>¼ piring:</strong> sumber karbohidrat (nasi, roti gandum, kentang, jagung)</li>
-                        <li><strong>¼ piring:</strong> sumber protein (ikan, ayam, telur, tahu, tempe)</li>
+                        <li><strong>Â½ piring:</strong> sayur dan buah</li>
+                        <li><strong>Â¼ piring:</strong> sumber karbohidrat (nasi, roti gandum, kentang, jagung)</li>
+                        <li><strong>Â¼ piring:</strong> sumber protein (ikan, ayam, telur, tahu, tempe)</li>
                     </ul>
 
                     <h3>2. Cukupi Cairan Tubuh</h3>
                     <ul>
-                        <li>Minum 8–10 gelas air putih per hari.</li>
+                        <li>Minum 8â€“10 gelas air putih per hari.</li>
                         <li>Kurangi minuman manis dan soda.</li>
                     </ul>
 
@@ -140,23 +147,23 @@ session_start(); // Wajib ada di paling atas untuk baca session login
                         <tbody>
                             <tr>
                                 <td>Senin</td>
-                                <td>Full Body–Kekuatan (Strength Focus)</td>
+                                <td>Full Bodyâ€“Kekuatan (Strength Focus)</td>
                                 <td>Dada, Punggung, Kaki, Core</td>
-                                <td>- Bench Press (3x8–10)<br>- Barbell Row (3x10)<br>- Squat (4x8)<br>- Plank (3x45 detik)</td>
+                                <td>- Bench Press (3x8â€“10)<br>- Barbell Row (3x10)<br>- Squat (4x8)<br>- Plank (3x45 detik)</td>
                                 <td>Gunakan beban sedang-berat</td>
                             </tr>
                             <tr>
                                 <td>Rabu</td>
-                                <td>Full Body – Volume (Hypertrophy Focus)</td>
+                                <td>Full Body â€“ Volume (Hypertrophy Focus)</td>
                                 <td>Bahu, Tangan, Paha, Core</td>
                                 <td>- Shoulder Press (3x10)<br>- Dumbbell Curl (3x12)<br>- Lunges (3x12 per kaki)<br>- Leg Press (3x10)<br>- Russian Twist (3x20)</td>
                                 <td>Fokus pada jumlah repetisi dan kontrol</td>
                             </tr>
                             <tr>
                                 <td>Jumat</td>
-                                <td>Full Body – Cardio & Stabilitas (Conditioning Focus)</td>
+                                <td>Full Body â€“ Cardio & Stabilitas (Conditioning Focus)</td>
                                 <td>Seluruh tubuh + jantung</td>
-                                <td>- Deadlift ringan (3x10)<br>- Pull-up / Lat Pulldown (3x10)<br>- Push-up (3x15)<br>- Jump Squat (3x15)<br>- HIIT / Treadmill 20–30 menit</td>
+                                <td>- Deadlift ringan (3x10)<br>- Pull-up / Lat Pulldown (3x10)<br>- Push-up (3x15)<br>- Jump Squat (3x15)<br>- HIIT / Treadmill 20â€“30 menit</td>
                                 <td>Latihan lebih cepat, intensitas tinggi</td>
                             </tr>
                         </tbody>
@@ -201,7 +208,7 @@ session_start(); // Wajib ada di paling atas untuk baca session login
                                 <td>Sabtu</td>
                                 <td>Core + Cardio Day</td>
                                 <td>Perut, pinggang, jantung</td>
-                                <td>- Plank (3x60 detik)<br>- Hanging Leg Raise (3x12)<br>- Russian Twist (3x20)<br>- Treadmill / HIIT 20–30 menit</td>
+                                <td>- Plank (3x60 detik)<br>- Hanging Leg Raise (3x12)<br>- Russian Twist (3x20)<br>- Treadmill / HIIT 20â€“30 menit</td>
                                 <td>Tambahkan stretching ringan setelah latihan</td>
                             </tr>
                         </tbody>
@@ -225,8 +232,8 @@ session_start(); // Wajib ada di paling atas untuk baca session login
                                 <td>Senin</td>
                                 <td>Push Day (Dada, Bahu, Trisep)</td>
                                 <td>Dada, Bahu depan, Trisep</td>
-                                <td>- Bench Press (4x8–10)<br>- Dumbbell Shoulder Press (3x10)<br>- Incline Dumbbell Press (3x10)<br>- Lateral Raise (3x12)<br>- Triceps Pushdown (3x12)</td>
-                                <td>Gunakan beban sedang–berat</td>
+                                <td>- Bench Press (4x8â€“10)<br>- Dumbbell Shoulder Press (3x10)<br>- Incline Dumbbell Press (3x10)<br>- Lateral Raise (3x12)<br>- Triceps Pushdown (3x12)</td>
+                                <td>Gunakan beban sedangâ€“berat</td>
                             </tr>
                             <tr>
                                 <td>Selasa</td>
@@ -246,7 +253,7 @@ session_start(); // Wajib ada di paling atas untuk baca session login
                                 <td>Kamis</td>
                                 <td>Core + Cardio (Stabilitas dan Daya Tahan)</td>
                                 <td>Perut, Pinggang, Daya tahan</td>
-                                <td>- Plank (3x60 detik)<br>- Hanging Leg Raise (3x15)<br>- Russian Twist (3x20)<br>- Mountain Climber (3x20)<br>- HIIT/Treadmill 20–30 menit</td>
+                                <td>- Plank (3x60 detik)<br>- Hanging Leg Raise (3x15)<br>- Russian Twist (3x20)<br>- Mountain Climber (3x20)<br>- HIIT/Treadmill 20â€“30 menit</td>
                                 <td>Bisa juga diganti dengan berenang / skipping</td>
                             </tr>
                             <tr>
@@ -259,7 +266,7 @@ session_start(); // Wajib ada di paling atas untuk baca session login
                             <tr>
                                 <td>Sabtu & Minggu</td>
                                 <td>Istirahat / Aktif ringan</td>
-                                <td>—</td>
+                                <td>â€”</td>
                                 <td>Jalan kaki, peregangan, yoga</td>
                                 <td>Pemulihan otot dan sendi</td>
                             </tr>
@@ -273,5 +280,7 @@ session_start(); // Wajib ada di paling atas untuk baca session login
         <p>&copy; 2025 Bull's Fitness. Hak Cipta Dilindungi.</p>
     </footer>
 
+    <script src="pwa.js"></script>
 </body>
 </html>
+
